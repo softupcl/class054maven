@@ -9,7 +9,6 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                /bin/sh
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
