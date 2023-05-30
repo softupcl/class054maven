@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                zsh 'mvn -B -DskipTests clean package' 
+                #!/bin/sh
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
 
