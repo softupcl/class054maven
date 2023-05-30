@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>7.1.0</version>
+		<version>3.1.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>BDD-Cauti</artifactId>
-	<version>1.0.1-RELEASE</version>
+	<version>0.0.1-RELEASE</version>
 	<name>BDD-Cauti</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
