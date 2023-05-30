@@ -1,15 +1,6 @@
 pipeline {
     agent any 
-    stages {
-        stage ('Initialize') {
-            steps {
-                sh '''
-                    echo "PATH = ${PATH}"
-                    echo "M2_HOME = ${M2_HOME}"
-                ''' 
-            }
-        }
-        stage('Inicio') {
+    stage('Inicio') {
             steps{
                 echo 'Iniciando ciclo'
             }
@@ -17,7 +8,10 @@ pipeline {
         }
         stage('Build') { 
             steps {
-                sh 'mvn clean package' 
+                withMaven {
+                    sh 'mvn clean package' 
+                }    
+                
             }
         }
 
