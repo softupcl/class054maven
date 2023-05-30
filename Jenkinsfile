@@ -4,6 +4,7 @@ pipeline {
         stage('Inicio') {
             steps{
                 echo 'Iniciando ciclo'
+                mvn --version
             }
             
         }
