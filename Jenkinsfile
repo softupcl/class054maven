@@ -1,6 +1,7 @@
 pipeline {
     agent any 
-    stage('Inicio') {
+    stages {
+        stage('Inicio') {
             steps{
                 echo 'Iniciando ciclo'
             }
@@ -8,10 +9,7 @@ pipeline {
         }
         stage('Build') { 
             steps {
-            
-                    sh 'mvn clean package' 
-     
-                
+                sh 'mvn -B -DskipTests clean package' 
             }
         }
 
